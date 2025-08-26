@@ -16,6 +16,9 @@ import java.time.LocalDateTime;
 @TableName("account_record")
 public class AccountRecord implements Serializable {
 
+
+
+
     private static final long serialVersionUID = 1L;
 
     @TableId(value = "id", type = IdType.ASSIGN_ID)
@@ -60,5 +63,5 @@ public class AccountRecord implements Serializable {
      */
     @TableLogic
     @TableField(value = "deleted")
-    private String deleted;
+    private String deleted = "0";
 }

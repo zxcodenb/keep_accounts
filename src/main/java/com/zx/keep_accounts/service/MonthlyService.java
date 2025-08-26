@@ -6,4 +6,6 @@ import com.zx.keep_accounts.entity.MonthlyInfo;
 
 public interface MonthlyService extends IService<MonthlyInfo> {
     void add(MonthlyInfo monthlyInfo);
+
+    MonthlyInfo getMonthlySummary(int year, int month);
 }

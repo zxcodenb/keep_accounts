@@ -1,6 +1,7 @@
 package com.zx.keep_accounts.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
@@ -29,5 +30,8 @@ public class MonthlyInfo implements Serializable {
     private Date updateTime;
 
     private String remark;
+
+    @TableField(exist = false)
+    private BigDecimal totalExpenditure;
 
 }

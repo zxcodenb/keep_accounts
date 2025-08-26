@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
@@ -25,6 +27,11 @@ public class MonthlyController extends BaseController {
     public AjaxResult add(@RequestBody MonthlyInfo monthlyInfo){
         monthlyService.add(monthlyInfo);
         return AjaxResult.success();
+    }
+
+    @GetMapping("/summary")
+    public AjaxResult getSummary(@RequestParam int year, @RequestParam int month) {
+        return AjaxResult.success(monthlyService.getMonthlySummary(year, month));
     }
 
 }

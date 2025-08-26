@@ -1,5 +1,6 @@
 package com.zx.keep_accounts.controller;
 
+import com.zx.keep_accounts.common.constant.AccountConstants;
 import com.zx.keep_accounts.common.core.controller.BaseController;
 import com.zx.keep_accounts.common.core.domain.AjaxResult;
 import com.zx.keep_accounts.common.core.page.TableDataInfo;
@@ -13,8 +14,10 @@ import java.math.BigDecimal;
 import java.util.List;
 
 @RestController
-@RequestMapping("/account-records")
+@RequestMapping("/account_records")
 public class AccountRecordController extends BaseController {
+
+
 
     @Autowired
     private AccountRecordService accountRecordService;
@@ -24,10 +27,6 @@ public class AccountRecordController extends BaseController {
         return accountRecordService.save(accountRecord) ? AjaxResult.success() : AjaxResult.error();
     }
 
-    @DeleteMapping("/{id}")
-    public AjaxResult delete(@PathVariable Long id) {
-        return accountRecordService.removeById(id) ? AjaxResult.success() : AjaxResult.error();
-    }
 
     @PutMapping
     public AjaxResult update(@RequestBody AccountRecord accountRecord) {

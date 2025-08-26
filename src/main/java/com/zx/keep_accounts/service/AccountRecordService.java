@@ -10,4 +10,6 @@ public interface AccountRecordService extends IService<AccountRecord> {
     Boolean setMonthBudget(BigDecimal monthBudget);
 
     List<AccountRecord> selectAccountRecordList(AccountRecord accountRecord);
+
+    BigDecimal calculateTotalExpenditureByMonth(int year, int month);
 }

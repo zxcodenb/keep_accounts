@@ -35,4 +35,9 @@ public class AccountRecordServiceImpl extends ServiceImpl<AccountRecordMapper, A
         }
         return baseMapper.selectList(queryWrapper);
     }
+
+    @Override
+    public BigDecimal calculateTotalExpenditureByMonth(int year, int month) {
+        return baseMapper.calculateTotalExpenditureByMonth(year, month);
+    }
 }
