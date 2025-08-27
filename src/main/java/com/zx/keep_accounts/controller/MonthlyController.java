@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.Date;
+
 
 @RestController
 @RequestMapping("/monthly")
@@ -29,9 +31,14 @@ public class MonthlyController extends BaseController {
         return AjaxResult.success();
     }
 
+    /**
+     *月财务概览
+     */
     @GetMapping("/summary")
-    public AjaxResult getSummary(@RequestParam int year, @RequestParam int month) {
-        return AjaxResult.success(monthlyService.getMonthlySummary(year, month));
+    public AjaxResult getSummary(@RequestParam Date date) {
+
+        return AjaxResult.success();
+//        return AjaxResult.success(monthlyService.getMonthlySummary(year, month));
     }
 
 }
