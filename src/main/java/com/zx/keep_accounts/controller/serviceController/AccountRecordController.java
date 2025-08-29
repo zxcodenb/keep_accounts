@@ -1,4 +1,4 @@
-package com.zx.keep_accounts.controller;
+package com.zx.keep_accounts.controller.serviceController;
 
 import com.zx.keep_accounts.common.core.controller.BaseController;
 import com.zx.keep_accounts.common.core.domain.AjaxResult;
