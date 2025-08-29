@@ -1,6 +1,7 @@
 package com.zx.keep_accounts.controller.aiController;
 
 import dev.langchain4j.model.chat.ChatModel;
+import dev.langchain4j.service.spring.AiService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,6 +19,7 @@ public class LowlevelController {
 
     @GetMapping("/model")
     public String model(@RequestParam(value = "message", defaultValue = "Hello") String message) {
+
         return chatModel.chat(message);
     }
 }

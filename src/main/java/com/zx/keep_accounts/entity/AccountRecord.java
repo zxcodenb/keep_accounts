@@ -64,4 +64,16 @@ public class AccountRecord implements Serializable {
     @TableLogic
     @TableField(value = "deleted")
     private String deleted = "0";
+
+    /**
+     * 账单查询起始时间
+     */
+    @TableField(exist = false)
+    private LocalDateTime startTime;
+
+    /**
+     * 账单查询结束时间
+     */
+    @TableField(exist = false)
+    private LocalDateTime endTime;
 }
