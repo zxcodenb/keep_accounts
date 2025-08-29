@@ -21,6 +21,7 @@ public class MonthlyInfo implements Serializable {
     @TableId(value = "id", type = IdType.ASSIGN_ID)
     private Long id;
 
+
     private BigDecimal monthBudget;
 
     private BigDecimal monthlyBalance;
